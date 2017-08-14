@@ -1,0 +1,68 @@
+body {
+    height: auto;
+    width: auto;
+    overflow: hidden;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#nav {
+    line-height: 50px;
+    background-color: #eeeeee;
+    height: auto;
+    width: auto;
+    float: left;
+    padding: 5px;
+}
+
+#nav a {
+    text-decoration: none;
+}
+
+#nav a:hover {
+    color: aquamarine;
+}
+
+#nav li {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+#section {
+    position: absolute;
+    line-height: 300px;
+    height: 1800px;
+    top: 40%;
+    margin-top: 100px;
+    margin-left: 650px;
+    margin-bottom: 400px;
+}
+
+input {
+    border: 0px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+a:link {
+    color: blue
+}
+
+a:visited {
+    color: blue
+}
