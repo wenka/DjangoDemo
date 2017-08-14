@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+ <style>
+        #header{
+            background-color:black;
+            color:white;
+            text-align:center;
+            padding:5px;
+        }
+        #section{
+            <!--position:absolute;-->
+            line-height:300px;
+            height:1800px
+            top:40%;
+            left:50%;
+            margin-top:100px;
+            margin-left:650px;
+            margin-bottom:400px;
+        }
+        #footer{
+            background-color:black;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <h1>个人信息</h1>
+</div>
+<div id="section">
+    <table border="1">
+        <thead>
+        <tr>
+            <td width="100">UserID</td>
+            <td width="100">username</td>
+            <!--<td width="100">Python</td>-->
+        </tr>
+        </thead>
+        <tbody>
+        {%for u in user%}
+        <tr>
+            <!--<td width="100">{{u.id}}</td>-->
+            <td width="100">{{u.username}}</td>
+            <td width="100">{{u.password}}</td>
+        </tr>
+        {%endfor%}
+        </tbody>
+    </table>
+</div>
+<div id="footer">
+    Copyright www.StudentManagement.com
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+        #header{
+            background-color:black;
+            color:white;
+            text-align:center;
+            padding:5px;
+        }
+        #section{
+            <!--position:absolute;-->
+            line-height:300px;
+            height:1800px
+            top:40%;
+            left:50%;
+            margin-top:100px;
+            margin-left:650px;
+            margin-bottom:400px;
+        }
+        form>input:nth-child(1),form>input:nth-child(2){
+            width:170px;
+        }
+        #footer{
+            background-color:black;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <h1>登录页面</h1>
+</div>
+<div id="section">
+    <!--<form method="post" action="/login_verify/">-->
+        <!--{% csrf_token %}-->
+        <!--<label for="username">用户名</label>-->
+        <!--<input type="text" name="username">-->
+        <!--<br>-->
+        <!--<br>-->
+        <!--<label for="password">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>-->
+        <!--<input type="password" name="password">-->
+        <!--<br>-->
+        <!--<br>-->
+        <!--<input type="submit" value="登录">-->
+    <!--</form>-->
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{uf.as_p}}
+        <br>
+        <input type="submit" value="登录">
+    </form>
+    <br>
+    <a href="/regist1/">注册</a>
+    <a href="/set_password">修改密码</a>
+</div>
+<div id="footer">
+    Copyright www.StudentManagement.com
+</div>
+</body>
+</html>

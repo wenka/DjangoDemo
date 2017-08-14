@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改成绩</title>
+    <style>
+        #header{
+            background-color:black;
+            color:white;
+            text-align:center;
+            padding:5px;
+        }
+        #section{
+            <!--position:absolute;-->
+            line-height:300px;
+            height:1800px
+            top:40%;
+            left:50%;
+            margin-top:100px;
+            margin-left:650px;
+            margin-bottom:400px;
+        }
+        label{
+            width:66px;
+            display:inline-block;
+            text-align:left;
+        }
+        form>input:nth-child(1),form>input:nth-child(2){
+            width:170px;
+        }
+        #footer{
+            background-color:black;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <h1>修改成绩</h1>
+</div>
+<div id="section">
+     <!--<form method="post" enctype="multipart/form-data">-->
+        <!--{% csrf_token %}-->
+        <!--{{scoreform.as_p}}-->
+        <!--<input type="submit" value="修改">-->
+    <!--</form>-->
+    <form method="post" action="/update_score1">
+        {% csrf_token %}
+        <h1>aaa,{{score.userID_id}}</h1>
+        <label for="'id">id</label>
+        <input type="text" name="id" value="{{score.userID_id}}">
+        <br>
+        <br>
+        <label for="java">java</label>
+        <input type="text" name="java">
+        <br>
+        <br>
+        <label for="python">python</label>
+        <input type="text" name="python">
+        <br>
+        <br>
+        <input type="submit" value="修改">
+        <input type="reset" value="重置">
+    </form>
+    <br>
+</div>
+<div id="footer">
+    Copyright www.StudentManagement.com
+</div>
+</body>
+</html>

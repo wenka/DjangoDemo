@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        #header{
+            background-color:black;
+            color:white;
+            text-align:center;
+            padding:5px;
+        }
+         #nav{
+            line-height:30px;
+            background-color:#eeeeee;
+            height:600px;
+            width:100px;
+            float:left;
+            padding:5px;
+        }
+        #section{
+            <!--position:absolute;-->
+            line-height:300px;
+            height:1800px
+            top:40%;
+            left:50%;
+            margin-top:100px;
+            margin-left:650px;
+            margin-bottom:400px;
+        }
+        input{
+            border:0px;
+        }
+        #footer{
+            background-color:black;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:5px;
+        }
+        a:link{color:blue}
+        a:visited{color:blue}
+    </style>
+</head>
+<body>
+<div id="header">
+    <h1>首页</h1>
+</div>
+<div id="nav">
+    <a href="http://127.0.0.1:8000/user_info">个人管理</a><br>
+    <a href="/all_score_info">成绩管理</a><br>
+    <a href="/score">个人成绩</a><br>
+    <a href="/add_score">添加成绩</a>
+</div>
+<div id="section">
+    <h1>welcome,{{username}}!</h1>
+</div>
+    <br>
+    <a href="http://127.0.0.1:8000/logout">注销</a>
+    <!--<a href="http://127.0.0.1:8000/set_password">修改密码</a>-->
+<div id="footer">
+    Copyright www.StudentManagement.com
+</div>
+</body>
+</html>

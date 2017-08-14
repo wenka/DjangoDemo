@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>成绩</title>
+ <style>
+        #header{
+            background-color:black;
+            color:white;
+            text-align:center;
+            padding:5px;
+        }
+        #section{
+            <!--position:absolute;-->
+            line-height:300px;
+            height:1800px
+            top:40%;
+            left:50%;
+            margin-top:100px;
+            margin-left:650px;
+            margin-bottom:400px;
+        }
+        #footer{
+            background-color:black;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <h1>成绩页面</h1>
+</div>
+<div id="section">
+    {%csrf_token%}
+    <h1>welcome,{{username}}</h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <!--<td width="100">ID</td>-->
+            <td width="100">UserID</td>
+            <td width="100">Java</td>
+            <td width="100">Python</td>
+            <td width="100">Operation1</td>
+            <td width="100">Operation2</td>
+        </tr>
+        </thead>
+        <tbody>
+        {%for score in score_list%}
+        <tr>
+            <!--<td width="100">{{s.id}}</td>-->
+            <td width="100">{{score.userID_id}}</td>
+            <td width="100">{{score.java}}</td>
+            <td width="100">{{score.python}}</td>
+            <td width="100"><a href="/delete_score/{{score.userID_id}}">删除</a></td>
+            <td width="100"><a href="http://127.0.0.1:8000/update_score/{{score.userID_id}}">修改</a></td>
+        </tr>
+        {%endfor%}
+        </tbody>
+    </table>
+</div>
+<div id="footer">
+    Copyright www.StudentManagement.com
+</div>
+</body>
+</html>
