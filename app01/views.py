@@ -166,7 +166,7 @@ def Regist(request):
 
 def Index(request):
     # uf=UserForm(request.POST)
-    username = request.session.get('username')
+    username = request.session.get('username', '')
     return render(request, 'index.html', {'username': username})
 
 

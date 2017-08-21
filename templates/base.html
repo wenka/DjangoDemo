@@ -1,18 +1,17 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title%}默认标题{%endblock%}--1111111</title>
+    <title>{% block title %}默认标题{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
 </head>
 <body>
-{%include 'header.html'%}
-
-{%block content%}
-<div>这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容.</div>
-{%endblock%}
-
-{%include 'section.html'%}
-
-{%include 'footer.html'%}
+{% block content %}
+    <div>这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容.</div>
+{% endblock %}
+<div id="footer">
+    Copyright www.StudentManagement.com
+</div>
 </body>
 </html>

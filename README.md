@@ -3,3 +3,7 @@
 
 - Python 3.5
 - Django 1.11.3
+
+
+module：
+pymysql
